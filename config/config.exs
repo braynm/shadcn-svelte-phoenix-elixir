@@ -31,7 +31,6 @@ config :shad, ShadWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :shad, Shad.Mailer, adapter: Swoosh.Adapters.Local
 
-
 # Configure tailwind (the version is required)
 config :tailwind,
   version: "3.4.0",
