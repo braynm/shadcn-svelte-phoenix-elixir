@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "esbuild": "^0.16.17",
+    "esbuild-plugin-import-glob": "^0.1.1",
+    "esbuild-svelte": "^0.8.0",
+    "svelte": "^4.2.15",
+    "svelte-preprocess": "^5.1.4",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@internationalized/date": "^3.5.2",
+    "bits-ui": "^0.21.6",
+    "clsx": "^2.1.1",
+    "cmdk-sv": "^0.0.17",
+    "embla-carousel-svelte": "^8.0.2",
+    "formsnap": "^1.0.0",
+    "live_svelte": "file:../deps/live_svelte",
+    "lucide-svelte": "^0.376.1",
+    "mode-watcher": "^0.3.0",
+    "paneforge": "^0.0.4",
+    "phoenix": "file:../deps/phoenix",
+    "phoenix_html": "file:../deps/phoenix_html",
+    "phoenix_live_view": "file:../deps/phoenix_live_view",
+    "svelte-radix": "^1.1.0",
+    "svelte-sonner": "^0.3.22",
+    "sveltekit-superforms": "^2.12.6",
+    "tailwind-merge": "^2.3.0",
+    "tailwind-variants": "^0.2.1",
+    "vaul-svelte": "^0.3.0",
+    "zod": "^3.23.5"
+  }
+}
