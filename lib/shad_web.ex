@@ -86,6 +86,7 @@ defmodule ShadWeb do
       # Core UI components and translation
       import ShadWeb.CoreComponents
       import ShadWeb.Gettext
+      import LiveSvelte
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS

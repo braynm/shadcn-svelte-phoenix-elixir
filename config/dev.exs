@@ -25,7 +25,8 @@ config :shad, ShadWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "j2iL93SnNBkXnzKtypoe8ml/5uknblpLb1wGjMqghFqdb51VY1HfGn1brZ1qkuuT",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:shad, ~w(--sourcemap=inline --watch)]},
+    node: ["build.js", "--watch", cd: Path.expand("../assets", __DIR__)],
+    # esbuild: {Esbuild, :install_and_run, [:shad, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:shad, ~w(--watch)]}
   ]
 
