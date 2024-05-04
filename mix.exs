@@ -5,7 +5,7 @@ defmodule Shad.MixProject do
     [
       app: :shad,
       version: "0.1.0",
-      elixir: "~> 1.14",
+      elixir: "~> 1.16.0",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -70,7 +70,6 @@ defmodule Shad.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      # setup: ["deps.get", "ecto.setup", "assets.setup", "assets.build"],
       setup: ["deps.get", "ecto.setup", "cmd --cd assets npm install"],
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
@@ -78,7 +77,7 @@ defmodule Shad.MixProject do
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
       "assets.build": ["tailwind shad", "esbuild shad"],
       "assets.deploy": [
-        "tailwind default --minify",
+        "tailwind shad --minify",
         "cmd --cd assets node build.js --deploy",
         "phx.digest"
       ]
