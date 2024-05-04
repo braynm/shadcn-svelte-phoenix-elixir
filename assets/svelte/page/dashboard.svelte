@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
 	import { Button } from "$lib/components/ui/button/index.js";
 	import * as Card from "$lib/components/ui/card/index.js";
@@ -19,22 +19,22 @@
 	import EllipsisVertical from "lucide-svelte/icons/ellipsis-vertical";
 	import Truck from "lucide-svelte/icons/truck";
 
+
   import { theme } from "../theme.js";
 
   let colorTheme
-
   onMount(() => {
-  theme.subscribe((value) => {
-    colorTheme = value
-    toggleTheme(value)
-  })
+		theme.subscribe((value) => {
+			colorTheme = value
+			toggleTheme(value)
+		})
 
-  function toggleTheme(themeName) {
-    const html = document.getElementsByTagName('html')
-    html[0].classList.remove('dark')
-    html[0].classList.remove('light')
-    html[0].classList.add(themeName)
-  }
+		function toggleTheme(themeName) {
+			const html = document.getElementsByTagName('html')
+			html[0].classList.remove('dark')
+			html[0].classList.remove('light')
+			html[0].classList.add(themeName)
+		}
   })
 
   function switchTheme() {
@@ -44,14 +44,21 @@
 </script>
 
 <div class="flex flex-col py-10 gap-5">
+	<Button size="sm" variant="outline" class="h-8 gap-1">
+		<Truck class="h-3.5 w-3.5" />
+		<Sun />
+		<span class="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">
+			Track Order
+		</span>
+	</Button>
 	<Button on:click={switchTheme} variant="outline" size="icon">
 		{#if colorTheme === 'light'}
 			<Sun
-				class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+				class="h-3.5 w-3.5"
 			/>
 		{:else}
 			<Moon
-				class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+				class="h-3.5 w-3.5"
 			/>
 		{/if}
 	</Button>
