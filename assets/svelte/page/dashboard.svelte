@@ -44,13 +44,6 @@
 </script>
 
 <div class="flex flex-col py-10 gap-5">
-	<Button size="sm" variant="outline" class="h-8 gap-1">
-		<Truck class="h-3.5 w-3.5" />
-		<Sun />
-		<span class="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">
-			Track Order
-		</span>
-	</Button>
 	<Button on:click={switchTheme} variant="outline" size="icon">
 		{#if colorTheme === 'light'}
 			<Sun
