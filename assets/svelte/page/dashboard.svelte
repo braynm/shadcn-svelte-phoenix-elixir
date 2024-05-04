@@ -26,10 +26,10 @@
   onMount(() => {
   theme.subscribe((value) => {
     colorTheme = value
-    addThemeIndicatorHtml(value)
+    toggleTheme(value)
   })
 
-  function addThemeIndicatorHtml(themeName) {
+  function toggleTheme(themeName) {
     const html = document.getElementsByTagName('html')
     html[0].classList.remove('dark')
     html[0].classList.remove('light')
