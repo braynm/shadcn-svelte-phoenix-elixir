@@ -10,7 +10,6 @@ defmodule Shad.Application do
     children = [
       {NodeJS.Supervisor, [path: LiveSvelte.SSR.NodeJS.server_path(), pool_size: 4]},
       ShadWeb.Telemetry,
-      Shad.Repo,
       {DNSCluster, query: Application.get_env(:shad, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Shad.PubSub},
       # Start the Finch HTTP client for sending emails

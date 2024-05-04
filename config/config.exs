@@ -8,7 +8,6 @@
 import Config
 
 config :shad,
-  ecto_repos: [Shad.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint

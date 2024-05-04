@@ -17,7 +17,8 @@ defmodule ShadWeb.Router do
   scope "/", ShadWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", PageController, :dashboard
+    get "/dashboard", PageController, :dashboard
   end
 
   # Other scopes may use custom stacks.
